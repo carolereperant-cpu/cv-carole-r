@@ -1,14 +1,14 @@
 
 @font-face {
     font-family: 'Raleway';
-    src: url('../fonts/Raleway-Regular.ttf') format('truetype');
+    src:url('../fonts/Raleway-Regular.woff') format('truetype');
     font-weight: 400; 
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Raleway';
-    src: url('../fonts/Raleway-Bold.ttf') format('truetype');
+    src: url('../fonts/Raleway-Bold.woff') format('truetype');
     font-weight: 700; 
     font-style: normal;
 }
@@ -39,4 +39,47 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Lato', sans-serif;
+}
+/* --- STRUCTURE GÉNÉRALE --- */
+
+/* Classe utilitaire pour centrer le contenu à 1160px (Brief [cite: 166]) */
+.container {
+    max-width: 1160px;
+    margin: 0 auto; /* Centre le bloc horizontalement */
+    width: 100%;
+}
+
+/* HEADER (En-tête) */
+header {
+    background-color: var(--primary-color); /* Turquoise */
+    /* La hauteur sera définie par le contenu interne + padding */
+}
+
+/* MAIN CONTENT (Zone centrale en Flexbox) */
+.main-content {
+    display: flex; /* Active Flexbox (Brief [cite: 164]) */
+    background-color: var(--bg-white);
+    min-height: 800px; /* Juste pour visualiser en attendant le contenu */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Légère ombre pour le style */
+}
+
+/* COLONNE GAUCHE */
+.left-column {
+    width: 35%; /* Environ un tiers de la largeur */
+    background-color: var(--bg-grey); /* Fond gris clair (Brief Maquette) */
+    padding: 30px;
+}
+
+/* COLONNE DROITE */
+.right-column {
+    width: 65%; /* Le reste de la largeur */
+    background-color: var(--bg-white); /* Fond blanc */
+    padding: 40px;
+}
+
+/* FOOTER */
+footer {
+    background-color: var(--primary-color);
+    padding: 20px 0;
+    margin-top: 0;
 }
