@@ -40,46 +40,133 @@ body {
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Lato', sans-serif;
 }
-/* --- STRUCTURE GÉNÉRALE --- */
 
-/* Classe utilitaire pour centrer le contenu à 1160px (Brief [cite: 166]) */
+/* STRUCTURE GÉNÉRALE */
+
 .container {
     max-width: 1160px;
-    margin: 0 auto; /* Centre le bloc horizontalement */
+    margin: 0 auto; 
     width: 100%;
 }
 
-/* HEADER (En-tête) */
 header {
-    background-color: var(--primary-color); /* Turquoise */
-    /* La hauteur sera définie par le contenu interne + padding */
+    background-color: transparent; 
+    
 }
 
-/* MAIN CONTENT (Zone centrale en Flexbox) */
 .main-content {
-    display: flex; /* Active Flexbox (Brief [cite: 164]) */
+    display: flex; 
     background-color: var(--bg-white);
-    min-height: 800px; /* Juste pour visualiser en attendant le contenu */
-    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Légère ombre pour le style */
+    min-height: 800px; 
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); 
 }
 
-/* COLONNE GAUCHE */
+
 .left-column {
-    width: 35%; /* Environ un tiers de la largeur */
-    background-color: var(--bg-grey); /* Fond gris clair (Brief Maquette) */
+    width: 35%; 
+    background-color: var(--bg-grey); 
     padding: 30px;
 }
 
-/* COLONNE DROITE */
+
 .right-column {
-    width: 65%; /* Le reste de la largeur */
-    background-color: var(--bg-white); /* Fond blanc */
+    width: 65%; 
+    background-color: var(--bg-white); 
     padding: 40px;
 }
 
-/* FOOTER */
+
 footer {
     background-color: var(--primary-color);
     padding: 20px 0;
     margin-top: 0;
+}
+/* --- STYLE DU HEADER --- */
+
+.header-content {
+    background-color: var(--primary-color); 
+    display: flex;
+    align-items: center;
+    padding: 50px 0;
+    color: white;
+    padding-left: 40px; 
+    padding-right: 40px;
+    margin-top: 20px; 
+}
+
+.header-photo {
+    margin-right: 80px;
+}
+
+.header-photo img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #ffffff; 
+    display: block;
+    transition: transform 0.3s ease;
+    cursor: zoom-in;
+}
+
+.header-photo img:hover {
+    transform: scale(1.05); 
+}
+
+
+.header-infos {
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+
+.identity {
+    text-align: center;
+    margin-bottom: 30px; 
+}
+
+.identity h1 {
+    font-family: 'Lato', sans-serif;
+    font-size: 3.5rem; 
+    font-weight: 700;
+    margin-bottom: 5px;
+    line-height: 1.1;
+}
+
+.identity h2 {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    opacity: 0.95;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 60px; 
+    row-gap: 15px;  
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.1rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 12px; 
+
+}
+
+
+.contact-item i {
+    font-size: 1.2rem;
+}
+
+.contact-item a {
+    color: white;
+    text-decoration: none;
+}
+.contact-item a:hover {
+    text-decoration: underline;
 }
