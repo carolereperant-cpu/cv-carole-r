@@ -158,7 +158,6 @@ footer {
 
 }
 
-
 .contact-item i {
     font-size: 1.2rem;
 }
@@ -169,4 +168,67 @@ footer {
 }
 .contact-item a:hover {
     text-decoration: underline;
+}
+
+ /* Colonne Gauche */
+.sidebar-section {
+    margin-bottom: 30px;
+    padding-bottom: 30px; 
+    border-bottom: 1px solid var(--border-grey); 
+}
+
+.sidebar-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+.sidebar-section h3 {
+    color: var(--primary-color);
+    font-size: 1.4rem;
+    text-transform: uppercase; 
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.sidebar-section ul {
+    list-style: none; 
+}
+
+.sidebar-section li {
+    margin-bottom: 12px;
+    font-size: 1rem;
+}
+
+.skill-list li, 
+.language-list li {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.stars {
+    color: var(--primary-color);
+    font-size: 0.9rem;
+}
+
+.language-list li strong {
+    font-weight: 700;
+}
+.language-list li span {
+    font-size: 0.95rem;
+    color: var(--text-dark);
+}
+
+.square-list li {
+    position: relative;
+    padding-left: 20px; 
+}
+
+.square-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 6px; 
+    width: 8px;
+    height: 8px;
+    background-color: var(--primary-color);
 }
