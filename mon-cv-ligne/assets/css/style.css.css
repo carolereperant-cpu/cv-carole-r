@@ -169,6 +169,9 @@ footer {
 .contact-item a:hover {
     text-decoration: underline;
 }
+address {
+    font-style: normal;
+}
 
  /* Colonne Gauche */
 .sidebar-section {
